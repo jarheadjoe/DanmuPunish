@@ -1,0 +1,32 @@
+<!--pages/log/log.wxml-->
+<view class="flex-wrp">
+  <image src="../../img/t3.png" mode = "aspectFit" class ="cover-img"></image>
+</view>
+<view class="flex-wrp" style="flex-direction:row;justify-content: center">
+  <view class="flex-item">
+    <button style="margin-left:36px;"class="pink-button" hover-class="pink-button-hover" open-type="getUserInfo" bindgetuserinfo="logGetUserHandler">试一下
+    </button>
+  </view>
+  <view class="flex-item">
+    <image src="../../img/t4.jpg" class="small-icon"></image>
+  </view>
+</view>
+<view style = "display: flex;justify-content: center;margin-top:10px">
+  <view  bindtap="noticeHandler">
+    <image class="input-label-img"src ="{{noticeImgSrc}}"  ></image>
+    <label class="weui-cells__title small-title" style="color:{{danmuNoticeColor}}">食用须知</label>
+  </view>
+</view>
+
+<view class="flex-wrp" style="flex-direction:row;justify-content: center;margin-top:10px;">
+  <view class="flex-item" >
+    <text class="cover-text" decode="{{true}}">*********************\n*&nbsp;@param1:视频链接\n*&nbsp;@param2:恶意弹幕内容\n*&nbsp;return:惩罚图表\n*&nbsp;以德报怨\n*&nbsp;世界和平peace\n*********************
+    </text>
+  </view>
+  <view class="flex-item" >
+    <text class="cover-text" decode="{{true}}">*\n*\n*\n*\n*\n*\n*</text>
+  </view>
+</view>
+<view style="text-align: center;margin-top:10px">
+  <text class="cover-text" style = "font-size:8pt">@大胃水手</text>
+</view>

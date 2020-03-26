@@ -1,0 +1,20 @@
+/* pages/log/log.wxss */
+.cover-img{
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  height: 150px;
+}
+.cover-text{
+  font-size: 10pt;
+  color: grey;
+  font-family: Courier;
+}
+.input-label-img{
+  width: 15px;
+  height:15px
+}
+.small-title{
+  font-size: 8px;
+  padding-left: 0px;
+}

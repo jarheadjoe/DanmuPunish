@@ -1,0 +1,130 @@
+/* pages/input/input.wxss */
+.input-cover{
+  width:100%;
+  height:100px;
+}
+.input-label-wrp{
+  flex-direction:row;
+  display: flex;
+  margin-top:10px;
+}
+.input-label-img{
+  width: 15px;
+  height:15px
+}
+.address-notice-img{
+  width: 250px;
+  height:200px;
+}
+.notice-text{
+  font-size: 10pt;
+  color: grey;
+  font-family: Courier;
+}
+.small-title{
+  font-size: 8px;
+  padding-left: 0px;
+}
+.danmu-checkbox{
+  font-size: 12px;
+  padding:10px!important;
+  min-width: 150px;
+}
+.force-text{
+  padding-left: 0px;
+  font-size: 18px;
+  margin: 0px 0px;
+}
+.force-view{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 30%;
+
+}
+.share {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(61, 61, 61, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 99999;
+}
+
+.share.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.share .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.share.show .content {
+  transform: translate3d(0, 0, 0);
+}
+
+.share .content .footer {
+  width: 562rpx;
+  height: 100rpx;
+  background: #fff;
+  border-top: 2rpx solid #e9e9e9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.share .content .footer .close {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+  border-left: 2rpx solid #e9e9e9;
+  color:grey
+}
+
+.share .content .footer .save {
+  height: 100rpx;
+  line-height: 100rpx;
+  flex-grow: 1;
+  flex-shrink: 1;
+  text-align: center;
+  color:#fb7299
+}
+
+.share.show .content .canvas {
+  display: inline-block;
+}
+
+.share .content .canvas {
+  display: inline-block;
+  background: #fff;
+  margin: 60rpx 0 0 0;
+}
+.handover {
+  position: fixed;
+  width: 115rpx;
+  height: 45rpx;
+  font-size: 26rpx;
+  letter-spacing: 5rpx;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.27);
+  border-radius: 44rpx;
+  text-align: center;
+  line-height: 45rpx;
+  border: none;
+}
+

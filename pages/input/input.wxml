@@ -1,0 +1,94 @@
+<mp-toptips msg="{{errorMsg}}" type="error" show="{{errorMsg}}"></mp-toptips>
+<mp-toptips msg="{{successMsg}}" type="success" show="{{successMsg}}"></mp-toptips>
+<view class="page" data-weui-theme="{{theme}}">
+<view>
+  <image src = "{{inputCoverSrc}}" mode = "aspectFit"class="input-cover"></image>
+</view>
+<view class="page-section">
+    <view class="input-label-wrp">
+      <label class="weui-cells__title">视频链接</label>
+      <view style="margin-top: 0.5em" bindtap="addressNoticeHandler">
+        <image class="input-label-img"src ="{{addressNoticeImgSrc}}"  ></image>
+        <label class="weui-cells__title small-title" style="color:{{addressNoticeColor}}">(点我查看提示)</label>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  placeholder="复制视频链接到这里" bindfocus="addressFocusHandler" bindinput="addressInputHandler" bindblur="addressBlurHandler"value="{{addressValue}}"/>
+      </view>
+    </view>
+    <view class="input-label-wrp">
+      <label class="weui-cells__title">恶意弹幕</label>
+      <view style="margin-top: 0.5em" bindtap="danmuNoticeHandler">
+        <image class="input-label-img"src ="{{danmuNoticeImgSrc}}"  ></image>
+        <label class="weui-cells__title small-title" style="color:{{danmuNoticeColor}}">(点我查看提示)</label>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" bindblur="danmuBlurHandler" bindfocus="danmuFocusHandler" bindinput="danmuInputHandler" placeholder="输入关键词或完整弹幕"value="{{danmuValue}}"/>
+      </view>
+    </view>
+</view>
+
+
+<view class="input-label-wrp force-view">
+  
+  <switch checked="{{forceChecked}}"type="checkbox"  bindchange="forceChange" color="#fb7299"/>
+  <label class="weui-cells__title force-text">打开增强</label>
+  <view style="margin-top: 0.5em" bindtap="forceNoticeHandler">
+    <image class="input-label-img"src ="{{forceNoticeImgSrc}}"  ></image>
+    <label class="weui-cells__title small-title" style="color:{{forceNoticeColor}}">(什么是增强？如何开启？)</label>
+  </view>
+</view>
+
+<view >
+  <button class="pink-button" hover-class="pink-button-hover" disabled="{{inputButtonDisable}}"  bindtap="inputButtonSubmitHandler">点我生成
+  </button>
+  <view style = "display: flex;justify-content: center;margin-top:10px"><label style="color:grey;font-size:12px;" bindtap="bugNoticeHandler">点我问题反馈！</label></view>
+  
+  
+</view>
+
+<mp-dialog title="视屏链接提示" show="{{addressNoticeDialog}}" bindbuttontap="noticeCloseHandler" buttons="{{oneButton}}">
+  <view><image src="../../img/n1.png" class="address-notice-img"mode="aspectFit"></image></view>
+  <view style="margin-top:20px"><text class="notice-text">复制链接，粘贴到输入框即可\n例1:https://b23.tv/av92664035\n例2：https://www.bilibili.com/video/BV1RE411H7wA/\n若多次尝试不行\n，建议将复制内容复制到记事本中检查</text></view>
+</mp-dialog>
+
+<mp-dialog title="弹幕输入提示" show="{{danmuNoticeDialog}}" bindbuttontap="noticeCloseHandler" buttons="{{oneButton}}">
+  <view><image src="../../img/n2.png" class="address-notice-img"mode="aspectFit"></image></view>
+  <view style="margin-top:20px"><text class="notice-text">复制弹幕列表中的弹幕\n或直接搜索关键字\n最多匹配20个符合的弹幕\n搜索词不能太模糊</text></view>
+</mp-dialog>
+
+<mp-dialog title="打开增强提示" show="{{forceNoticeDialog}}" bindbuttontap="noticeCloseHandler" buttons="{{oneButton}}">
+  <view><image src="../../img/n3.png" class="address-notice-img"mode="aspectFit"></image></view>
+  <view style="margin-top:20px"><text class="notice-text">打开增强，可在生成报表时\n添加弹幕真实用户头像与昵称\n增强功能须在由公众号\n打开的小程序中使用\n(公众号)入口：大胃水手</text></view>
+</mp-dialog>
+
+<mp-dialog title="问题反馈" show="{{bugNoticeDialog}}" bindbuttontap="noticeCloseHandler" buttons="{{oneButton}}">
+  <view style="margin-top:20px"><text class="notice-text">遇到问题，请携带错误码\n直接发送到“大胃水手”公众号后台\n或在github项目\nhttps://github.com/jarheadjoe/DanmuPunish提issue\n谢谢各位姥爷</text></view>
+</mp-dialog>
+
+<mp-dialog title="弹幕筛选确认" show="{{danmuConfirmDialog}}" bindbuttontap="danmuConfirmHandler" buttons="{{buttons}}" >
+  <view>
+    <mp-cells title="弹幕列表">
+        <mp-checkbox-group prop="radio" multi="{{false}}" bindchange="radioChange" ext-class="danmu-checkbox">
+            <mp-checkbox wx:for="{{radioItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"ext-class="danmu-checkbox" >
+            </mp-checkbox>
+        </mp-checkbox-group>
+    </mp-cells>
+  </view>
+</mp-dialog>
+
+</view>
+<view class="share {{imageVisible ? 'show' : ''}}">
+  <view class="content">
+    
+    <canvas class="canvas" canvas-id="share" style='width:{{viewWidth}}px; height:{{viewHeight}}px;'/>
+    <view class='handover' style='left:{{viewWidth-25}}px;bottom:{{viewHeight+20}}px' bindtap='imageChangeHandler'>换一张</view>
+    <view class="footer" style="width:{{viewWidth}}px">
+      <view class="save" bindtap="canvasSaveHandler">保存到相册~</view>
+      <view class="close" bindtap="canvasCloseHandler" >关闭</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+/**app.wxss**/
+@import "./lib/weui.wxss";
+@import "./lib/dialog/dialog.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.pink-button{
+  background-color: #fb7299;
+  color: white;
+  font: 15px -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,   Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif
+}
+.pink-button-hover{
+  background-color: pink;
+}
+.small-icon{
+  height:36px;
+  width:36px;
+}
+.flex-wrp {display: flex;}

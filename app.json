@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/log/log",
+    "pages/input/input",
+    "pages/notice/notice"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "恶意弹幕惩罚官",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "usingComponents": {
+    "mp-dialog": "/lib/dialog/dialog",
+    "mp-toptips": "/lib/toptips/toptips",
+    "mp-checkbox-group": "/lib/checkbox-group/checkbox-group",
+    "mp-checkbox": "/lib/checkbox/checkbox",
+    "mp-cells": "/lib/cells/cells"
+  },
+  "sitemapLocation": "sitemap.json"
+}
