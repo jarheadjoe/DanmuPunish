@@ -3,7 +3,7 @@
 
 可在公众号大胃水手中打开试用
 
-![image](https://github.com/jarheadjoe/DanmuPunish/tree/master/doc/6.png)
+![image](https://github.com/jarheadjoe/DanmuPunish/blob/master/doc/6.png)
 
 ### 我是谁
 
@@ -27,7 +27,7 @@
 
 1 在首页可（1）查看说明（2）点击“试一下”登录使用
 
-![image](https://github.com/jarheadjoe/DanmuPunish/tree/master/doc/1.png)
+![image](https://github.com/jarheadjoe/DanmuPunish/blob/master/doc/1.png)
 
 2 进入输入界面后可
 
@@ -35,19 +35,19 @@
 
   (2)输入恶意弹幕关键词，匹配搜索到的弹幕不超过20条即可
 
-![image](https://github.com/jarheadjoe/DanmuPunish/tree/master/doc/2.png)
+![image](https://github.com/jarheadjoe/DanmuPunish/blob/master/doc/2.png)
 
 3 点击“点我生成”后，根据搜索到弹幕选择
 
-![image](https://github.com/jarheadjoe/DanmuPunish/tree/master/doc/3.png)
+![image](https://github.com/jarheadjoe/DanmuPunish/blob/master/doc/3.png)
 
 4 选择好后，稍等片刻生成报表，报表可下载
 
-![image](https://github.com/jarheadjoe/DanmuPunish/tree/master/doc/4.png)
+![image](https://github.com/jarheadjoe/DanmuPunish/blob/master/doc/4.png)
 
 5 如果打开“增强”，则在报表中显示发送弹幕用户的头像和昵称
 
-![image](https://github.com/jarheadjoe/DanmuPunish/tree/master/doc/4.png)
+![image](https://github.com/jarheadjoe/DanmuPunish/blob/master/doc/5.png)
 
 
 
